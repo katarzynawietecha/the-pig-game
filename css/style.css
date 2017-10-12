@@ -1,3 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 1.4em;
+  vertical-align: baseline;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: pink;
+  background-color: #baa49c;
+  color: #e2166b;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  overflow: auto;
+  font-weight: normal;
+}
+
+.container {
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 800px;
+  height: 550px;
+  background-color: white;
+  box-shadow: 0px 0px 28px 0px gray;
+  overflow: hidden; /*!*/
+}
+
+.box {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  /*border: 1px solid black;*/
+  overflow: hidden; /*!*/
+}
+
+/*Start box*/
+.title {
+  margin: auto;
+  height: 40px;
+  width: 300px;
+  text-align: center;
+}
+
+h1.title {
+  margin-top: 35px;
+  font-size: 35px;
+}
+
+h2.title {
+  margin-bottom: 35px;
+  font-size: 25px;
+}
+
+p {
+  width: 700px;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pig-place {
+  width: 150px;
+  height: 150px;
+  margin: 30px auto;
+}
+
+img { /*pig picture*/
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+/*Game box*/
+#game {
+  display: none;
+}
+
+
+
+/*End box*/
+#end {
+  display: none;
 }

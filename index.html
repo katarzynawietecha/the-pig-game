@@ -6,18 +6,24 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <header>
-      <div class="container">
+        <div class="container">
+          <div class="box" id="start">
+            <h1 class="title">THE PIG</h1>
+            <h2 class="title">DICE GAME</h2>
+            <p>The game has two players, playing in rounds. In each turn, you roll a dice as many times as you whish. Each result get added to your round score. But, if you roll a 1, all your round score gets lost. After that, it's the next player's turn. You can choose to "hold", which means that your round score gets added to your global score. After that, it's the next player's turn. The first player to reach 40 points on global score wins the game!</p>
+            <div class="pig-place">
+              <img src="images/piggy.png" alt="Cute piggy" />
+            </div>
+            <p>Click the pig to continue,</p>
+          </div>
+        <div class="box" id="game">
+          Game time!
+          <button>Click to end the game!</button>
+        </div>
+        <div class="box" id="end">
+          End of game.
+        </div>
       </div>
-    </header>
-    <section>
-      <div class="container">
-      </div>
-    </section>
-    <footer>
-      <div class="container">
-      </div>
-    </footer>
     <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
     <script src="js/app.js" type="text/javascript"></script>
   </body>
