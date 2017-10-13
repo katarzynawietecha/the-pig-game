@@ -13,7 +13,6 @@ body {
   color: #e2166b;
   font-family: Arial, sans-serif;
   font-size: 16px;
-  overflow: auto;
   font-weight: normal;
 }
 
@@ -21,21 +20,26 @@ body {
   margin: 0 auto;
   margin-top: 100px;
   width: 800px;
-  height: 550px;
+  height: 600px;
   background-color: white;
   box-shadow: 0px 0px 28px 0px gray;
   overflow: hidden; /*!*/
+  position: relative;
 }
 
 .box {
   margin: 0 auto;
   width: 100%;
   height: 100%;
-  /*border: 1px solid black;*/
   overflow: hidden; /*!*/
 }
 
 /*Start box*/
+#start {
+  background-color: #fbf6e9;
+}
+
+
 .title {
   margin: auto;
   height: 40px;
@@ -64,6 +68,10 @@ p {
   width: 150px;
   height: 150px;
   margin: 30px auto;
+  background-color: #fdcfd7;
+  color: #403838;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px gray;
 }
 
 img { /*pig picture*/
@@ -80,7 +88,87 @@ img { /*pig picture*/
   display: none;
 }
 
+.player-0-panel, .player-1-panel {
+  width: 50%;
+  height: 100%;
+  float: left;
+  margin: 0 auto;
+  padding-top: 70px;
+  text-align: center;
+}
 
+.player-0-panel {
+  background-color: #e7ecff;
+}
+
+.player-1-panel {
+  background-color: #f5dec6;
+}
+
+.player-name {
+  font-size: 34px;
+  text-transform: uppercase;
+}
+
+.active {
+  background-color: hsla(0, 0%, 100%, 0.45);
+}
+
+.player-global-score {
+  font-size: 60px;
+  padding-top: 10px;
+  margin-bottom: 90px;
+}
+
+.player-current-box {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: #e2166b;
+  color: white;
+  overflow: hidden; /*!*/
+}
+
+.player-current-label {
+  height: 40px;
+  font-size: 16px;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.player-current-score {
+  font-size: 24px;
+}
+
+#game button {
+  width: 134px;
+  height: 60px;
+  font-size: 18px;
+  background-color: #fdcfd7;
+  color: #403838;
+  position: absolute;
+  left: 333px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px gray;
+}
+
+#game button.roll {
+  top: 410px;
+}
+
+#game button.hold {
+  top: 490px;
+}
+
+img.dice {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 195px;
+    left: 355px;
+    box-shadow: 0px 0px 5px 0px gray;
+    /*display: none;*/
+}
 
 /*End box*/
 #end {

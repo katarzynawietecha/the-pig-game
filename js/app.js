@@ -11,10 +11,10 @@ $(function(){
     gameBox.css("display", "block");
   });
 
-  button.on("click", function(){
-    gameBox.css("display", "none");
-    endBox.css("display", "block");
-  })
+  // button.on("click", function(){
+  //   gameBox.css("display", "none");
+  //   endBox.css("display", "block");
+  // })
 
 
 });
