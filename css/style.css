@@ -35,10 +35,10 @@ body {
 }
 
 /*Start box*/
-#start {
-  background-color: #fbf6e9;
-}
 
+/*#start {
+  background-color: #fbf6e9;
+}*/
 
 .title {
   margin: auto;
@@ -97,13 +97,13 @@ img { /*pig picture*/
   text-align: center;
 }
 
-.player-0-panel {
+/*.player-0-panel {
   background-color: #e7ecff;
 }
 
 .player-1-panel {
   background-color: #f5dec6;
-}
+}*/
 
 .player-name {
   font-size: 34px;
@@ -144,11 +144,11 @@ img { /*pig picture*/
   width: 134px;
   height: 60px;
   font-size: 18px;
-  background-color: #fdcfd7;
+  background-color: white/*#fdcfd7*/;
   color: #403838;
   position: absolute;
   left: 333px;
-  border-radius: 5px;
+  /*border-radius: 5px;*/
   box-shadow: 0px 0px 5px 0px gray;
 }
 
