@@ -55,13 +55,21 @@ $(function(){
 
 
   holdButton.on("click",function(){
-    console.log("HoldButton is clicked!")
+    //Add current score do global score
+    scores[activePlayer] +=roundScore;
+    //Update user's global score
+    document.getElementById('score-'+activePlayer).innerText = scores[activePlayer];
+
+    //Check if active player won the game
+    if(scores[activePlayer] >= 40){
+      console.log("We have the winner!");
+      gameBox.hide();
+      endBox.show();
+    }else{
+      nextPlayer()
+    }
   })
 
-
-  function nextPlayer(){
-    console.log("Next player!");
-  }
 
   function newGame(){
     scores = [0, 0];
@@ -88,17 +96,11 @@ $(function(){
 
     roundScore = 0;
     // current0.innerText = 0;
-    document.querySelector('#current-0').innerText = 0;
+    document.getElementById('current-0').innerText = 0;
     // current1.innerText = 0;
-    document.querySelector('#current-1').innerText = 0;
+    document.getElementById('current-1').innerText = 0;
 
     dicePicture.hide("slow");
   }
-
-  // button.on("click", function(){
-  //   gameBox.css("display", "none");
-  //   endBox.css("display", "block");
-  // })
-
 
 });
