@@ -10,6 +10,7 @@ $(function(){
   var startButton = $(".pig-place");
   var rollButton = $(".roll");
   var holdButton = $(".hold");
+  var playAgainButton = $(".play-again");
 
   //Other
   var dicePicture = $("img.dice");
@@ -19,18 +20,18 @@ $(function(){
   var current1 = $("#current-1");
   var name0 = $("#name-0");
   var name1 = $("#name-1");
-  // var player0Panel = $(".player-0-panel");
-  // var player1Panel = $(".player-1-panel");
+  var winnerNameInterval;
 
   //Numeral
   var diceNumber, scores, roundScore, activePlayer;
 
-  //Start button
+
   startButton.on("click",function(){
     startBox.hide();
     gameBox.show();
     newGame();
   });
+
 
   rollButton.on("click",function(){
     //Roll dice and display
@@ -42,16 +43,15 @@ $(function(){
       roundScore += diceNumber;
       if(activePlayer == 0){
         // current0.innerText = roundScore; - it's not working
-        document.querySelector('#current-0').innerText = roundScore;
+        document.getElementById('current-0').innerText = roundScore;
       }else{
         // current1.innerText = roundScore; - it's not working
-        document.querySelector('#current-1').innerText = roundScore;
+        document.getElementById('current-1').innerText = roundScore;
       }
     }else{  //IF the number is "1": next player
       nextPlayer()
     }
-
-  })
+  });
 
 
   holdButton.on("click",function(){
@@ -62,13 +62,33 @@ $(function(){
 
     //Check if active player won the game
     if(scores[activePlayer] >= 40){
-      console.log("We have the winner!");
+      var winnerName = $(".winner-name");
+      if(activePlayer == 0){
+        winnerName.innerText = name0.innerText;
+        // document.querySelector(".winner-name").innerText = name0.innerText;
+      }else{
+        winnerName.innerText = name1.innerText;
+        // document.querySelector(".winner-name").innerText = name0.innerText;
+      }
+      winnerNameInterval = setInterval(function () {
+        winnerName.toggleClass("effect1");
+        winnerName.toggleClass("effect2");
+      }, 800);
+
       gameBox.hide();
       endBox.show();
     }else{
       nextPlayer()
     }
-  })
+  });
+
+
+  playAgainButton.on("click",function(){
+    endBox.hide();
+    gameBox.show();
+    clearInterval(winnerNameInterval);
+    newGame();
+  });
 
 
   function newGame(){
@@ -77,10 +97,10 @@ $(function(){
     roundScore = 0;
 
     dicePicture.hide();
-    score0.innerText = "0";
-    score1.innerText = "0";
-    current0.innerText = "0";
-    current1.innerText = "0";
+    document.getElementById('score-0').innerText = "0";
+    document.getElementById('score-1').innerText = "0";
+    document.getElementById('current-0').innerText = "0";
+    document.getElementById('current-1').innerText = "0";
     name0.innerText = "Player 1";
     name1.innerText = "Player 2";
     name0.removeClass("active");
@@ -95,12 +115,14 @@ $(function(){
     name1.toggleClass("active");
 
     roundScore = 0;
-    // current0.innerText = 0;
     document.getElementById('current-0').innerText = 0;
-    // current1.innerText = 0;
     document.getElementById('current-1').innerText = 0;
 
-    dicePicture.hide("slow");
+    if(diceNumber == 1){
+      dicePicture.hide("fast");
+    }else{
+      dicePicture.hide();
+    }
   }
 
 });

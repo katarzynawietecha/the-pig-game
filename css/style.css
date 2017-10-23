@@ -35,11 +35,6 @@ body {
 }
 
 /*Start box*/
-
-/*#start {
-  background-color: #fbf6e9;
-}*/
-
 .title {
   margin: auto;
   height: 40px;
@@ -80,9 +75,6 @@ img { /*pig picture*/
 }
 
 
-
-
-
 /*Game box*/
 #game {
   display: none;
@@ -97,14 +89,6 @@ img { /*pig picture*/
   text-align: center;
 }
 
-/*.player-0-panel {
-  background-color: #e7ecff;
-}
-
-.player-1-panel {
-  background-color: #f5dec6;
-}*/
-
 .player-name {
   font-size: 34px;
   text-transform: uppercase;
@@ -112,7 +96,6 @@ img { /*pig picture*/
 }
 
 .active {
-  /*background-color: hsla(0, 0%, 100%, 0.45);*/
   border: 1px solid pink;
 }
 
@@ -142,15 +125,18 @@ img { /*pig picture*/
   font-size: 24px;
 }
 
-#game button {
+button:hover {
+  font-weight: bold;
+}
+
+#game button, #end button {
   width: 134px;
   height: 60px;
   font-size: 18px;
-  background-color: white/*#fdcfd7*/;
+  background-color: white;
   color: #403838;
   position: absolute;
   left: 333px;
-  /*border-radius: 5px;*/
   box-shadow: 0px 0px 5px 0px gray;
 }
 
@@ -169,10 +155,29 @@ img.dice {
     top: 195px;
     left: 355px;
     box-shadow: 0px 0px 5px 0px gray;
-    /*display: none;*/
 }
+
 
 /*End box*/
 #end {
   display: none;
+}
+
+h1.winner-introduce {
+  margin-top: 150px;
+}
+
+h1.winner-name {
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+h1.effect1 {
+  transform: rotate(2deg);
+  color: #ea2779;
+}
+
+h1.effect2 {
+  transform: rotate(-2deg);
+  color: #cb1460;
 }
