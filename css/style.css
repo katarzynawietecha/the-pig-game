@@ -108,6 +108,7 @@ img { /*pig picture*/
 .player-name {
   font-size: 34px;
   text-transform: uppercase;
+  border: 1px solid white;
 }
 
 .active {

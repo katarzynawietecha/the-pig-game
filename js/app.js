@@ -80,7 +80,20 @@ $(function(){
     name0.addClass("active");
   }
 
+  function nextPlayer(){
+    //next player will be active
+    activePlayer == 0 ? activePlayer = 1 : activePlayer = 0;
+    name0.toggleClass("active");
+    name1.toggleClass("active");
 
+    roundScore = 0;
+    // current0.innerText = 0;
+    document.querySelector('#current-0').innerText = 0;
+    // current1.innerText = 0;
+    document.querySelector('#current-1').innerText = 0;
+
+    dicePicture.hide("slow");
+  }
 
   // button.on("click", function(){
   //   gameBox.css("display", "none");
