@@ -2,4 +2,19 @@
 
 Pig is a simple dice game.
 
--> Project in progress <-
+
+**License**
+
+This project is released under the MIT License.
+
+
+**Demo**
+
+https://wietecha-mrzyglod.github.io/the-pig-game/
+
+
+**Technologies Used**
+
+* HTML,
+* CSS,
+* jQuery.

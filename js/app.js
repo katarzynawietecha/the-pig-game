@@ -3,16 +3,19 @@ $(function(){
   //Basic variables
   //Screens
   var startBox = $("#start");
+  var namesBox = $("#names");
   var gameBox = $("#game");
   var endBox = $("#end");
 
   //Buttons
   var startButton = $(".pig-place");
+  var checkNameButton = $(".check-name");
   var rollButton = $(".roll");
   var holdButton = $(".hold");
   var playAgainButton = $(".play-again");
 
   //Other
+  var errorMessage = $(".error-message");
   var dicePicture = $("img.dice");
   var score0 = $("#score-0");
   var score1 = $("#score-1");
@@ -28,10 +31,19 @@ $(function(){
 
   startButton.on("click",function(){
     startBox.hide();
-    gameBox.show();
-    newGame();
+    namesBox.show();
   });
 
+  checkNameButton.on("click",function(){
+    console.log("checkNameButton clicked!");
+    if(($(".first-player-name").val()!="")&&($(".second-player-name").val()!="")){
+      namesBox.hide();
+      gameBox.show();
+      newGame();
+    }else{
+      $(".error-message").addClass("error-color");
+    }
+  });
 
   rollButton.on("click",function(){
     //Roll dice and display
@@ -64,11 +76,9 @@ $(function(){
     if(scores[activePlayer] >= 40){
       var winnerName = $(".winner-name");
       if(activePlayer == 0){
-        winnerName.innerText = name0.innerText;
-        // document.querySelector(".winner-name").innerText = name0.innerText;
+        document.querySelector(".winner-name").innerText = document.getElementById('name-0').innerText;
       }else{
-        winnerName.innerText = name1.innerText;
-        // document.querySelector(".winner-name").innerText = name0.innerText;
+        document.querySelector(".winner-name").innerText = document.getElementById('name-1').innerText;
       }
       winnerNameInterval = setInterval(function () {
         winnerName.toggleClass("effect1");
@@ -101,8 +111,10 @@ $(function(){
     document.getElementById('score-1').innerText = "0";
     document.getElementById('current-0').innerText = "0";
     document.getElementById('current-1').innerText = "0";
-    name0.innerText = "Player 1";
-    name1.innerText = "Player 2";
+    // var firstPlayerName = $("input.first-player-name").val();
+    // console.log(firstPlayerName);name0.innerText = "Player 1";
+    document.getElementById('name-0').innerText = $("input.first-player-name").val();
+    document.getElementById('name-1').innerText = $("input.second-player-name").val();
     name0.removeClass("active");
     name1.removeClass("active");
     name0.addClass("active");

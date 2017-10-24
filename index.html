@@ -6,16 +6,28 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-        <div class="container">
-          <div class="box" id="start">
-            <h1 class="title">THE PIG</h1>
-            <h2 class="title">DICE GAME</h2>
-            <p>The game has two players, playing in rounds. In each turn, you roll a dice as many times as you whish. Each result get added to your round score. But, if you roll a 1, all your round score gets lost. After that, it's the next player's turn. You can choose to "hold", which means that your round score gets added to your global score. After that, it's the next player's turn. The first player to reach 40 points on global score wins the game!</p>
-            <div class="pig-place">
-              <img src="images/piggy.png" alt="Cute piggy" />
-            </div>
-            <p>CLICK THE PIG TO CONTINUE!</p>
+      <div class="container">
+        <!-- Start box -->
+        <div class="box" id="start">
+          <h1 class="title">THE PIG</h1>
+          <h2 class="title">DICE GAME</h2>
+          <p>The game has two players, playing in rounds. In each turn, you roll a dice as many times as you whish. Each result get added to your round score. But, if you roll a 1, all your round score gets lost. After that, it's the next player's turn. You can choose to "hold", which means that your round score gets added to your global score. After that, it's the next player's turn. The first player to reach 40 points on global score wins the game!</p>
+          <div class="pig-place">
+            <img src="images/piggy.png" alt="Cute piggy" />
           </div>
+          <p>CLICK THE PIG TO CONTINUE!</p>
+        </div>
+        <!-- Names box -->
+        <div class="box" id="names">
+          <h1 class="title">Please enter your names</h1>
+            <label>Player 1:</label><br>
+            <input type="text" class="first-player-name" placeholder="Name of first player" maxlength="10"/>
+            <label>Player 2:</label><br>
+            <input type="text" class="second-player-name" placeholder="Name of second player" maxlength="10"/>
+            <div class="error-message">Please enter the names of both players.</div>
+            <button class="check-name">NEXT</button>
+        </div>
+        <!-- Game box -->
         <div class="box" id="game">
           <!-- First player -->
           <div class="player-0-panel">
@@ -39,6 +51,7 @@
           <button class="hold">HOLD POINTS</button>
           <img src="images/dice-3.png" alt="Dice" class="dice">
         </div>
+        <!-- End box -->
         <div class="box" id="end">
           <h1 class="title winner-introduce">The winner is</h1>
           <h1 class="title winner-name effect1">player</h1>
