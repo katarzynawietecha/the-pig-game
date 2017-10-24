@@ -10,7 +10,7 @@
 
 body {
   background-color: #baa49c;
-  color: #e2166b;
+  color: white;
   font-family: Arial, sans-serif;
   font-size: 16px;
   font-weight: normal;
@@ -32,6 +32,7 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden; /*!*/
+  background-color: #735ad8;
 }
 
 /*Start box*/
@@ -40,6 +41,7 @@ body {
   height: 40px;
   width: 300px;
   text-align: center;
+  background-color: #ecd45a;
 }
 
 h1.title {
@@ -84,6 +86,8 @@ img { /*pig picture*/
   width: 450px;
   margin-top: 80px;
   margin-bottom: 45px;
+  background-color: #ea758a;
+  padding-bottom: 48px;
 }
 
 label {
@@ -111,11 +115,15 @@ input {
   margin-bottom: 5px;
   padding: 3px;
   text-align: center;
-  color: white;
+  color: #735ad8;
 }
 
 .error-color {
-  color: red;
+  color: #b70000;
+}
+
+#names button {
+  background-color: #ecd45a;
 }
 
 /*Game box*/
@@ -135,11 +143,10 @@ input {
 .player-name {
   font-size: 34px;
   text-transform: uppercase;
-  border: 1px solid white;
 }
 
 .active {
-  border: 1px solid pink;
+  background-color: #ecd45a;
 }
 
 .player-global-score {
@@ -152,7 +159,7 @@ input {
   width: 100px;
   height: 100px;
   margin: 0 auto;
-  background-color: #e2166b;
+  background-color: #ea758a;
   color: white;
   overflow: hidden; /*!*/
 }
@@ -208,20 +215,23 @@ img.dice {
 
 h1.winner-introduce {
   margin-top: 150px;
+  padding-bottom: 48px;
+  background-color: #ea758a;
 }
 
 h1.winner-name {
   margin-top: 50px;
   margin-bottom: 80px;
   text-transform: uppercase;
+  background-color: #735ad8;
 }
 
 h1.effect1 {
   transform: rotate(2deg);
-  color: #ea2779;
+  color: #dcc23c;
 }
 
 h1.effect2 {
   transform: rotate(-2deg);
-  color: #cb1460;
+  color: #ecd45a;
 }
