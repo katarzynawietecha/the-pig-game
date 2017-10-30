@@ -23,6 +23,11 @@ $(function(){
   var current1 = $("#current-1");
   var name0 = $("#name-0");
   var name1 = $("#name-1");
+  var pigEar1 = $(".pig-ear1");
+  var pigEar2 = $(".pig-ear2");
+  var pigEye1 = $(".pig-eye1-dot");
+  var pigEye2 = $(".pig-eye2-dot");
+  var pigTail = $(".pig-tail");
   var winnerNameInterval;
 
   //Numeral
@@ -32,6 +37,22 @@ $(function(){
   startButton.on("click",function(){
     startBox.hide();
     namesBox.show();
+  });
+
+  startButton.on("mouseenter", function(){
+    pigEar1.addClass("ear-up");
+    pigEar2.addClass("ear-up");
+    pigEye1.addClass("eye-dot-up");
+    pigEye2.addClass("eye-dot-up");
+    pigTail.addClass("tail-down");
+  });
+
+  startButton.on("mouseleave", function(){
+    pigEar1.removeClass("ear-up");
+    pigEar2.removeClass("ear-up");
+    pigEye1.removeClass("eye-dot-up");
+    pigEye2.removeClass("eye-dot-up");
+    pigTail.removeClass("tail-down");
   });
 
   checkNameButton.on("click",function(){
