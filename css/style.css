@@ -246,12 +246,13 @@ div[class*="pig-foot"] {
   display: none;
 }
 
-#names h1.title {
+#names h2.title {
   width: 450px;
   margin-top: 80px;
   margin-bottom: 45px;
   background-color: #ea758a;
   padding-bottom: 48px;
+  font-size: 35px;
 }
 
 label {
@@ -378,25 +379,27 @@ img.dice {
   display: none;
 }
 
-h1.winner-introduce {
+h2.winner-introduce {
   margin-top: 150px;
   padding-bottom: 48px;
   background-color: #ea758a;
+  font-size: 35px;
 }
 
-h1.winner-name {
+h2.winner-name {
   margin-top: 50px;
   margin-bottom: 80px;
   text-transform: uppercase;
   background-color: #735ad8;
+  font-size: 35px;
 }
 
-h1.effect1 {
+h2.effect1 {
   transform: rotate(2deg);
   color: #dcc23c;
 }
 
-h1.effect2 {
+h2.effect2 {
   transform: rotate(-2deg);
   color: #ecd45a;
 }
